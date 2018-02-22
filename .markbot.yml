@@ -1,0 +1,44 @@
+repo: 'button-systems'
+canvasCourse: 'web-dev-2'
+
+inherit:
+  - naming-restrict-live
+  - git-2
+  - html
+  - css
+  - modulifier
+  - modulifier-buttons
+  - screenshots-320
+  - css-order-modules-main
+
+html:
+  - path: 'index.html'
+    outline: false
+    has:
+      - 'a.btn'
+      - 'a.btn.btn-ghost'
+      - 'a.btn.btn-light'
+    search:
+      - 'Click me!'
+      - 'No, click me!'
+      - 'No really, click me!'
+
+css:
+  - path: 'css/main.css'
+    has:
+      - ['html', 'font-family', 'sans-serif']
+      - ['.btn', 'background-color', 'limegreen']
+      - ['.btn', 'border-color', 'limegreen']
+      - ['.btn:hover', 'background-color', 'darkgreen']
+      - ['.btn:hover', 'border-color', 'darkgreen']
+      - ['.btn-ghost', 'background-color', 'transparent']
+      - ['.btn-ghost:hover', 'background-color', 'transparent']
+      - ['.btn-light', 'background-color', 'lightgreen']
+      - ['.btn-light', 'border-color', 'lightgreen']
+
+screenshots:
+  - path: 'index.html'
+    label: 'Hover'
+    sizes: [320]
+    before: |
+      hover('.btn', () => done());
